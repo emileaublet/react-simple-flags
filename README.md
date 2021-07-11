@@ -42,16 +42,7 @@ import { useReactSimpleFlags } from 'react-simple-flags'
 const MyComponent = () => {
   // This will return true is the flag is enabled, otherwise false if the flag is disabled or if it does not exist.
   const hasThisFlag = useReactSimpleFlags('flagName') // flagName correspond to the "name" value in flags.json.
-  return (
-    <div style={{ margin: '1rem' }}>
-      <h1>⛳️ Flags</h1>
-      <p>Change flags.json to edit the values</p>
-      <ul>
-        <li>{isAdmin ? 'isAdmin in enabled' : 'isAdmin is disabled'}.</li>
-        <li>{isFunny ? 'isFunny is enabled' : 'isFunny is disabled'}</li>
-      </ul>
-    </div>
-  )
+  return hasThisFlag ? 'do something' : 'do something else'
 }
 
 export default MyComponent
