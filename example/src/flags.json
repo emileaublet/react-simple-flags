@@ -1,0 +1,4 @@
+[
+    {"name": "isAdmin", "enabled": true},
+    {"name": "isFunny", "enabled": false}
+]
