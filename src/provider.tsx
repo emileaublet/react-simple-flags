@@ -1,14 +1,17 @@
+// import { FlagsConsole } from "./components";
 import React from "react";
-//import { FlagsConsole } from "./components";
 import { ReactSimpleFlagsContext, ReactSimpleFlagsProps } from "./context";
 
 // const dev = process.env.NODE_ENV === "development";
 interface Props {
-  children: React.ReactNode;
+  children: JSX.Element;
   initialFlags: ReactSimpleFlagsProps;
 }
 
-export const ReactSimpleFlagsProvider = ({ children, initialFlags }: Props) => {
+export const ReactSimpleFlagsProvider = ({
+  children,
+  initialFlags,
+}: Props): JSX.Element => {
   // const [flags, setFlags] = useState(initialFlags);
   return (
     <ReactSimpleFlagsContext.Provider value={initialFlags}>

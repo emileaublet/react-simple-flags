@@ -9,6 +9,6 @@
 //   return <div className={styles.test}>Example Component: {text}</div>
 // }
 
-export { ReactSimpleFlagsProvider } from "./provider";
-export { ReactSimpleFlagsContext } from "./context";
-export { useReactSimpleFlags } from "./hook";
+export { ReactSimpleFlagsProvider } from './provider'
+export { ReactSimpleFlagsContext } from './context'
+export { useReactSimpleFlags } from './hook'
