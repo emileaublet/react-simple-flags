@@ -15,37 +15,42 @@ npm install --save react-simple-flags
 ### At the root of your app
 
 ```tsx
-import './index.css'
+import "./index.css";
 
-import React from 'react'
-import ReactDOM from 'react-dom'
-import { ReactSimpleFlagsProvider } from 'react-simple-flags'
-import App from './App'
-import flags from './flags.json' // you import the initialFlags the way you want
+import React from "react";
+import ReactDOM from "react-dom";
+import { ReactSimpleFlagsProvider } from "react-simple-flags";
+import App from "./App";
+
+// Flags can be imported, fetched, from env etc.
+const flags = [
+  { name: "flagA", enabled: true },
+  { name: "otherFlag", enabled: false },
+];
 
 ReactDOM.render(
   <ReactSimpleFlagsProvider initialFlags={flags}>
     <App />
   </ReactSimpleFlagsProvider>,
-  document.getElementById('root')
-)
+  document.getElementById("root")
+);
 ```
 
 ### In your components
 
 ```tsx
-import React from 'react'
+import React from "react";
 
-import 'react-simple-flags/dist/index.css'
-import { useReactSimpleFlags } from 'react-simple-flags'
+import "react-simple-flags/dist/index.css";
+import { useReactSimpleFlags } from "react-simple-flags";
 
 const MyComponent = () => {
   // This will return true is the flag is enabled, otherwise false if the flag is disabled or if it does not exist.
-  const hasThisFlag = useReactSimpleFlags('flagName') // flagName correspond to the "name" value in flags.json.
-  return hasThisFlag ? 'do something' : 'do something else'
-}
+  const hasThisFlag = useReactSimpleFlags("flagName"); // flagName correspond to the "name" value in flags.json.
+  return hasThisFlag ? "do something" : "do something else";
+};
 
-export default MyComponent
+export default MyComponent;
 ```
 
 ## License
