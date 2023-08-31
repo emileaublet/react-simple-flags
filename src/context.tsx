@@ -1,9 +1,6 @@
 import React from 'react'
-export interface ReactSimpleFlagProps {
-  name: string;
-  enabled: boolean;
-}
-export type ReactSimpleFlagsProps = ReactSimpleFlagProps[]
+
+export type ReactSimpleFlagsProps = Map<string, boolean>
 
 export const ReactSimpleFlagsContext =
-  React.createContext<ReactSimpleFlagsProps>([])
+  React.createContext<ReactSimpleFlagsProps>(new Map<string, boolean>())
