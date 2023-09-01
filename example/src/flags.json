@@ -1,4 +1,4 @@
 [
-    {"name": "isAdmin", "enabled": true},
-    {"name": "isFunny", "enabled": false}
+  ["isAdmin", true],
+  ["isFunny", false]
 ]
